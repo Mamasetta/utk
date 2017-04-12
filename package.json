@@ -1,0 +1,29 @@
+{
+  "name": "druz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.14.0",
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-less": "^3.0.5",
+    "gulp-minify-css": "^1.0.0",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^1.3.3",
+    "gulp-sourcemaps": "^1.5.0",
+    "gulp-stylus": "^2.3.1",
+    "gulp-svg-sprite": "^1.3.5",
+    "gulp-uglify": "^1.1.0",
+    "gulp-watch": "^4.1.1",
+    "gulp.spritesmith": "^6.2.1",
+    "imagemin-pngquant": "^4.0.0",
+    "rimraf": "^2.3.1"
+  }
+}
