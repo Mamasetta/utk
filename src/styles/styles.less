@@ -17,6 +17,7 @@
   line-height: 1.2;
   border-bottom: 1px dashed #444;
   color: #444;
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -39,11 +40,13 @@
   background-color: #fdb12a;
   color: #222;
   font-size: 20px;
-  line-height: 2.5;
+  line-height: 60px;
   letter-spacing: 0.06em;
+  text-align: center;
   text-transform: uppercase;
   border: none;
   outline: none;
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -71,7 +74,7 @@
   &:hover,
   &:focus {
     background-color: #e3a740;
-    border: none;
+    border-color: #e3a740;
     color: #eee;
     border: none;
     outline: none;
@@ -80,7 +83,7 @@
   &:active {
     background-color: #c78a22;
     padding-top: 1px;
-    border: none;
+    border-color: #c78a22;
     color: #eee;
     border: none;
     outline: none;
@@ -108,11 +111,12 @@
 
 .page-header {
   position: absolute;
+  z-index: 100;
   top: 0;
   left: 0;
   padding-top: 12px;
   width: 100%;
-  background-color: #000;
+  // background-color: rgba(0, 0, 0, 0);
 
   &__place {
     color: #bbb;
@@ -243,6 +247,111 @@
   }
 }
 
-main {
-  padding-top: 330px;
+.slider {
+
+  &__slide {
+    position: relative;
+    display: none;
+    background-image: url('../images/slider-bg.jpg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+  }
+
+  .showed {
+    display: block;
+  }
+
+  &__inner {
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    width: 1140px;
+    min-height: 240px;
+    margin-top: -120px;
+    margin-left: -570px;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 56px;
+    margin-top: -28px;
+    opacity: 0.3;
+    cursor: pointer;
+  }
+
+  &__arrow_left {
+    background-image: url('../images/arrow-left.png');
+    left: 0;
+  }
+
+  &__arrow_right {
+    background-image: url('../images/arrow-right.png');
+    right: 0;
+  }
+
+  &__title {
+    font-size: 40px;
+    line-height: 1.75;
+    color: #eee;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  &__subtitle {
+    font-size: 30px;
+    line-height: 1.6;
+    color: #eee;
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  &__buttons {
+    text-align: center;
+  }
+
+  &__button {
+    margin-right: 110px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__controls {
+    position: absolute;
+    bottom: -140px;
+    left: 50%;
+    width: 200px;
+    height: 10px;
+    margin-left: -100px;
+    text-align: center;
+  }
+
+  &__control {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #e5e5e6;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .checked {
+    background-color: #fdb12a;
+  }
 }
