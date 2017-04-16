@@ -3,17 +3,19 @@
 }
 
 @baseColor: #444;
-@baseFont: 'Tahoma', sans-serif;
-@baseSize: 20px;
+@baseFont: @osans;
+@baseSize: 15px;
 
 body {
+	position: relative;
+	height: 100%;
 	font-family: @baseFont;
 	font-size: @baseSize;
+	line-height: 1.6;
 	color: @baseColor;
 	background-color: #fff;
 	text-align: left;
 	margin: 0;
-	position: relative;
 }
 
 button[type=submit],
@@ -48,6 +50,7 @@ ul {
 }
 
 a {
+	color: @baseFont;
   text-decoration: none;
 
 	&:hover,
@@ -55,23 +58,23 @@ a {
 	&:focus,
 	&:visited {
 		text-decoration: none;
+		color: @baseFont;
 	}
 }
 
 h1 {
-	font-weight: bold;
+	.nulled;
+	font-weight: 600;
 	font-size: 40px;
-	line-height: 60px;
+	line-height: 1.75;
+	color: #eee;
 }
 
 h2 {
-	font-weight: bold;
-	font-size: 40px;
-	line-height: 60px;
-}
-
-p {
-	line-height: 30px;
+	.nulled;
+	font-weight: 400;
+	font-size: 35px;
+	line-height: 1.4;
 }
 
 

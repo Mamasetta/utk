@@ -355,3 +355,127 @@
     background-color: #fdb12a;
   }
 }
+
+.benefits {
+  padding-top: 90px;
+  padding-bottom: 55px;
+  background-color: #fff;
+
+  &__title {
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    position: relative;
+    text-align: center;
+    font-size: 25px;
+    line-height: 2;
+    margin-bottom: 100px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 500px;
+      height: 2px;
+      margin-left: -250px;
+      background-color: #fdb12a;
+    }
+  }
+
+  &__items {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    position: relative;
+    width: 25%;
+    min-height: 130px;
+    margin-bottom: 10px;
+
+    &_title {
+      font-size: 17px;
+      line-height: 1.2;
+      text-align: center;
+      padding-top: 75px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      background-repeat: no-repeat;
+    }
+
+    &_first::before {
+      top: 21px;
+      margin-left: -25px;
+      width: 50px;
+      height: 23px;
+      background-image: url('../images/car.png');
+    }
+
+    &_second::before {
+      top: 0;
+      margin-left: -16px;
+      width: 32px;
+      height: 50px;
+      background-image: url('../images/sertificate.png');
+    }
+
+    &_third::before {
+      top: 9px;
+      margin-left: -25px;
+      width: 50px;
+      height: 37px;
+      background-image: url('../images/hand-shake.png');
+    }
+
+    &_fourth::before {
+      top: 11px;
+      margin-left: -25px;
+      width: 50px;
+      height: 40px;
+      background-image: url('../images/business-cards.png');
+    }
+
+    &_fifth::before {
+      top: 0;
+      margin-left: -26px;
+      width: 52px;
+      height: 50px;
+      background-image: url('../images/like.png');
+    }
+
+    &_sixth::before {
+      top: 7px;
+      margin-left: -25px;
+      width: 50px;
+      height: 40px;
+      background-image: url('../images/gold.png');
+    }
+
+    &_seventh::before {
+      top: 4px;
+      margin-left: -24px;
+      width: 48px;
+      height: 50px;
+      background-image: url('../images/cleaning-lady.png');
+    }
+
+    &_eighth::before {
+      top: 1px;
+      margin-left: -25px;
+      width: 49px;
+      height: 50px;
+      background-image: url('../images/contract.png');
+    }
+  }
+}
