@@ -579,7 +579,7 @@
       bottom: 0;
       width: 479px;
       height: 2px;
-      margin-left: -250px;
+      margin-left: -239px;
       background-color: #fdb12a;
     }
   }
@@ -683,7 +683,7 @@
       bottom: 0;
       width: 591px;
       height: 2px;
-      margin-left: -250px;
+      margin-left: -295px;
       background-color: #fdb12a;
     }
   }
@@ -748,7 +748,7 @@
       bottom: 0;
       width: 591px;
       height: 2px;
-      margin-left: -250px;
+      margin-left: -295px;
       background-color: #fdb12a;
     }
   }
@@ -763,6 +763,128 @@
   }
 
   &__button {
+    text-align: center;
+  }
+}
+
+.contact {
+  background-color: #fceaca;
+  padding-top: 94px;
+  padding-bottom: 81px;
+
+  &__title {
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    position: relative;
+    text-align: center;
+    font-size: 25px;
+    line-height: 2;
+    margin-bottom: 100px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 605px;
+      height: 2px;
+      margin-left: -302px;
+      background-color: #fdb12a;
+    }
+  }
+
+  &__form {
+    width: 770px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  form {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__form-left {
+    width: 270px;
+    margin-bottom: 40px;
+  }
+
+  &__input {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+    }
+
+    &_name::before {
+      top: 15px;
+      left: 12px;
+      width: 20px;
+      height: 20px;
+      background-image: url('../images/name.png');
+    }
+
+    &_tel::before {
+      top: 15px;
+      left: 17px;
+      width: 12px;
+      height: 20px;
+      background-image: url('../images/phone.png');
+    }
+
+    &_email::before {
+      top: 17px;
+      left: 13px;
+      width: 20px;
+      height: 16px;
+      background-image: url('../images/email.png');
+    }
+  }
+
+  input {
+    .nulled;
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    border-radius: 6px;
+    padding-left: 40px;
+    border: none;
+    outline: none;
+    box-shadow: inset 0 1px 2px 1px #e0e0e0;
+  }
+
+  textarea {
+    .nulled;
+    box-sizing: border-box;
+    width: 100%;
+    height: 170px;
+    border-radius: 6px;
+    padding-top: 20px;
+    padding-left: 15px;
+    border: none;
+    outline: none;
+    box-shadow: inset 0 1px 2px 1px #e0e0e0;
+  }
+
+  &__form-right {
+    width: 470px;
+    margin-bottom: 40px;
+  }
+
+  &__button {
+    width: 100%;
     text-align: center;
   }
 }

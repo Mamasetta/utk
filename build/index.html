@@ -728,16 +728,28 @@
 				<form action="">
 
 					<div class="contact__form-left">
-						<input name="name" type="text" placeholder="Ваше имя">
-						<input name="tel" type="tel" placeholder="Ваш телефон">
-						<input name="email" type="email" placeholder="Ваш e-mail">
+
+						<div class="contact__input contact__input_name">
+							<input name="name" type="text" placeholder="Ваше имя">
+						</div>
+
+						<div class="contact__input contact__input_tel">
+							<input name="tel" type="tel" placeholder="Ваш телефон">
+						</div>
+
+						<div class="contact__input contact__input_email">
+							<input name="email" type="email" placeholder="Ваш e-mail">
+						</div>
+
 					</div>
 
 					<div class="contact__form-right">
 						<textarea name="question" cols="30" rows="10" placeholder="Задайте вопрос"></textarea>
 					</div>
 
-					<button type="submit" class="button">отправить</button>
+					<div class="contact__button">
+						<button type="submit" class="button">отправить</button>
+					</div>
 
 				</form>
 
