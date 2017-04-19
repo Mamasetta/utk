@@ -771,6 +771,7 @@
   background-color: #fceaca;
   padding-top: 94px;
   padding-bottom: 81px;
+  margin-bottom: 111px;
 
   &__title {
     text-align: center;
@@ -886,5 +887,53 @@
   &__button {
     width: 100%;
     text-align: center;
+  }
+}
+
+.map {
+  height: 600px;
+  background-image: url('../images/map.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__container {
+    position: relative;
+  }
+
+  &__contacts {
+    position: absolute;
+    box-sizing: border-box;
+    width: 570px;
+    height: 600px;
+    background-color: #fff;
+    padding-top: 30px;
+  }
+
+  &__title {
+    position: relative;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    margin-bottom: 80px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 275px;
+      height: 2px;
+      margin-left: -137px;
+      background-color: #fdb12a;
+    }
+  }
+
+  &__text {
+    padding-left: 100px;
+    padding-right: 130px;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
   }
 }
