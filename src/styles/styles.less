@@ -6,7 +6,7 @@
 @import 'responsive.less';
 
 .container {
-  width: 1140px;
+  width: 1170px;
   margin: 0 auto;
 }
 
@@ -27,7 +27,7 @@
 
   &:active {
     color: #444;
-    border-bottom: 2px solid #fdb12a;
+    border-bottom: 2px solid @colorYellow;
   }
 }
 
@@ -37,7 +37,7 @@
   width: 250px;
   height: 60px;
   border-radius: 6px;
-  background-color: #fdb12a;
+  background-color: @colorYellow;
   color: #222;
   font-size: 20px;
   line-height: 60px;
@@ -67,7 +67,7 @@
 
 .button__opacity {
   background-color: rgba(0, 0, 0, 0);
-  border: 1px solid #fdb12a;
+  border: 1px solid @colorYellow;
   color: #eee;
   outline: none;
 
@@ -150,7 +150,7 @@
 
       &:active {
         color: #444;
-        border-bottom: 1px solid #fdb12a;
+        border-bottom: 1px solid @colorYellow;
       }
     }
   }
@@ -188,7 +188,7 @@
     }
 
     .checked {
-      border-bottom: 2px solid #fdb12a;
+      border-bottom: 2px solid @colorYellow;
     }
 
     .page-header__menu_submenu {
@@ -243,7 +243,7 @@
   }
 
   .checked {
-    border-bottom: 2px solid #fdb12a;
+    border-bottom: 2px solid @colorYellow;
   }
 }
 
@@ -352,7 +352,7 @@
   }
 
   .checked {
-    background-color: #fdb12a;
+    background-color: @colorYellow;
   }
 }
 
@@ -382,7 +382,7 @@
       width: 500px;
       height: 2px;
       margin-left: -250px;
-      background-color: #fdb12a;
+      background-color: @colorYellow;
     }
   }
 
@@ -580,7 +580,7 @@
       width: 479px;
       height: 2px;
       margin-left: -239px;
-      background-color: #fdb12a;
+      background-color: @colorYellow;
     }
   }
 
@@ -652,7 +652,7 @@
     left: 30px;
     width: 30px;
     height: 30px;
-    background-color: #fdb12a;
+    background-color: @colorYellow;
     border-radius: 50%;
     cursor: pointer;
   }
@@ -684,7 +684,7 @@
       width: 591px;
       height: 2px;
       margin-left: -295px;
-      background-color: #fdb12a;
+      background-color: @colorYellow;
     }
   }
 
@@ -749,7 +749,7 @@
       width: 591px;
       height: 2px;
       margin-left: -295px;
-      background-color: #fdb12a;
+      background-color: @colorYellow;
     }
   }
 
@@ -794,7 +794,7 @@
       width: 605px;
       height: 2px;
       margin-left: -302px;
-      background-color: #fdb12a;
+      background-color: @colorYellow;
     }
   }
 
@@ -925,7 +925,7 @@
       width: 275px;
       height: 2px;
       margin-left: -137px;
-      background-color: #fdb12a;
+      background-color: @colorYellow;
     }
   }
 
@@ -935,5 +935,128 @@
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 40px;
+  }
+}
+
+.page-title {
+  position: relative;
+  padding-top: 240px;
+  padding-bottom: 65px;
+  background-image: url('../images/page-title-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  text-align: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  h1 {
+    position: relative;
+    z-index: 100;
+  }
+}
+
+.page-menu {
+  margin-top: 25px;
+  margin-bottom: 40px;
+
+  ul {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: center;
+  }
+
+  li {
+    margin-right: 40px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    font-size: 20px;
+    line-height: 1.2;
+    color: #444;
+    border: none;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      border-bottom: 2px solid @colorYellow;
+    }
+  }
+}
+
+.ladder-item {
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-top: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 70px;
+  margin-bottom: 65px;
+  background-image: url('../images/ladder-item-bg.jpg');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 5px 10px 1px #d4d4d4;
+
+  &__grey {
+    background-image: none;
+    background-color: #fafafa;
+  }
+
+  &__title {
+    position: relative;
+    width: 100%;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+
+    h2 {
+      display: inline-block;
+      border-bottom: 2px solid @colorYellow;
+    }
+  }
+
+  &__left {
+    width: 350px;
+    margin-right: 40px;
+  }
+
+  &__right {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 570px;
+  }
+
+  &__text {
+    .nulled;
+    margin-bottom: 30px;
+  }
+
+  &__button {
+    text-align: center;
+
+    span {
+      display: block;
+      margin-top: 15px;
+    }
   }
 }
