@@ -160,6 +160,31 @@
     }
   }
 
+  &__place-mobile {
+    display: none;
+
+    ul {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      justify-content: flex-end;
+
+      li {
+        font-size: 11px;
+        color: #eee;
+
+        img {
+          width: 130px;
+          height: 50px;
+        }
+      }
+    }
+  }
+
+  &__menu-mobile_place {
+    display: none;
+  }
+
   &__menu {
     ul {
       display: -webkit-flex;
@@ -776,6 +801,30 @@
     border-radius: 50%;
     cursor: pointer;
   }
+
+  &__controls {
+    display: none;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    width: 200px;
+    height: 10px;
+    margin-left: -100px;
+    text-align: center;
+  }
+
+  &__control {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #e5e5e6;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .checked {
+    background-color: @colorYellow;
+  }
 }
 
 .works {
@@ -1055,6 +1104,44 @@
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 40px;
+  }
+}
+
+.map-mobile {
+  display: none;
+
+  &__contacts {
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  &__title {
+    position: relative;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 133px;
+      height: 2px;
+      margin-left: -66px;
+      background-color: @colorYellow;
+    }
+  }
+
+  &__map-block {
+    background-image: url('../images/map.jpg');
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 200px;
   }
 }
 
