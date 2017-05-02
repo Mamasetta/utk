@@ -310,6 +310,10 @@
       }
     }
   }
+
+  .show {
+    display: block;
+  }
 }
 
 .page-footer {
@@ -1073,6 +1077,7 @@
   &__contacts {
     position: absolute;
     box-sizing: border-box;
+    z-index: 100;
     width: 570px;
     height: 600px;
     background-color: #fff;
@@ -1489,5 +1494,126 @@
   p {
     .nulled;
     margin-bottom: 30px;
+  }
+}
+
+
+.popup {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  .showed {
+    display: block;
+  }
+
+  &__bg {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1100;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  &__block {
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 48px;
+    padding-left: 135px;
+    padding-right: 135px;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    width: 570px;
+    background-color: rgba(288, 288, 288, 0.9);
+    border-radius: 10px;
+
+    input {
+      .nulled;
+      box-sizing: border-box;
+      width: 100%;
+      height: 50px;
+      border-radius: 6px;
+      padding-left: 40px;
+      border: none;
+      outline: none;
+      box-shadow: inset 0 1px 2px 1px #e0e0e0;
+      font-size: 20px;
+    }
+
+    textarea {
+      .nulled;
+      box-sizing: border-box;
+      width: 100%;
+      height: 170px;
+      border-radius: 6px;
+      padding-top: 20px;
+      padding-left: 40px;
+      border: none;
+      outline: none;
+      box-shadow: inset 0 1px 2px 1px #e0e0e0;
+      font-size: 20px;
+    }
+  }
+
+  &__cross {
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    top: 8px;
+    right: 8px;
+    background-image: url('../images/cross.png');
+    cursor: pointer;
+  }
+
+  &__title {
+    .nulled;
+    text-align: center;
+    font-size: 25px;
+    line-height: 2;
+    text-transform: uppercase;
+    margin-bottom: 45px;
+  }
+
+  &__input {
+    width: 300px;
+    margin-bottom: 45px;
+  }
+
+  &__button {
+    text-align: center;
+  }
+}
+
+.show {
+  display: block;
+}
+
+.popup-2 {
+  .popup__input {
+    margin-bottom: 15px;
+  }
+
+  .popup__button {
+    margin-top: 45px;
+  }
+}
+
+.popup-3 {
+  .popup__title {
+    margin-bottom: 10px;
+  }
+
+  .popup__input {
+    margin-bottom: 15px;
+  }
+
+  .popup__button {
+    margin-top: 45px;
   }
 }

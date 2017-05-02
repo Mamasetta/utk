@@ -1,8 +1,7 @@
 @media screen and (max-width: 1024px) {
   body {
     .container {
-      max-width: 750px;
-      width: 300px;
+      width: 750px;
     }
 
     h1 {
@@ -387,6 +386,11 @@
   body {
     font-size: 12px;
 
+    .container {
+      max-width: 750px;
+      width: 300px;
+    }
+
     .button {
       width: 125px;
       height: 30px;
@@ -738,6 +742,18 @@
 
     .feedback-page {
       margin-top: 20px;
+    }
+
+    .popup {
+      &__block {
+        padding: 20px 10px;
+        width: 300px;
+        margin-top: 0;
+      }
+
+      &__input {
+        width: 280px;
+      }
     }
   }
 }
